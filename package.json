@@ -1,0 +1,27 @@
+{
+  "name": "workshop_mean",
+  "version": "1.0.0",
+  "description": "application crud blog nodejs express mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "nodejs",
+    "cors",
+    "crud"
+  ],
+  "author": "raedhamrouni",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "nodemon": "^3.1.9",
+    "slugify": "^1.6.6"
+  }
+}
