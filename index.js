@@ -1,10 +1,14 @@
 const express = require('express');
+const cors = require('cors');
+
 const database = require('./src/database/db.config');
 require('dotenv').config();
+
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 const teamRouter = require('./src/api/routes/team');
 app.use(teamRouter)
 
@@ -14,7 +18,7 @@ database.mongoose.connect(database.url, {
   useUnifiedTopology: true,
 })
 .then(() => {
-  console.log('✅ Connecté à MongoDB');
+  console.log('Connecté à MongoDB');
 })
 .catch(err => {
   console.error('Erreur de connexion MongoDB :', err);
